@@ -1,0 +1,235 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --primary: 207 0 6;
+        --primary-light : 255 237 238;
+        --negative : 233 60 60;
+        --client-font: 'Rubik', sans-serif;
+        --black: 0 0 0;
+     }
+     input,
+     select,
+     textarea {
+         @apply 
+         placeholder:text-sm placeholder:text-black/40
+         focus-within:outline-0 bg-transparent text-[15px]
+     }
+    p{@apply text-sm font-normal}
+    body { @apply font-client scroll-smooth bg-white}
+}
+@layer utilities{
+    .transition { @apply transition-all duration-300 ease-linear }
+}
+@layer components{
+
+    /* container content */
+    .container { @apply max-w-6xl w-full mx-auto px-4 }
+    .row { @apply flex flex-wrap -m-3 }
+    .col-1 { @apply w-1/6 p-3 }
+    .col-2 { @apply w-1/5 p-3 }
+    .col-3 { @apply w-1/4 p-3 }
+    .col-4 { @apply w-1/3 p-3 }
+    .col-5 { @apply w-2/5 p-3 }
+    .col-6 { @apply w-1/2 p-3 }
+    .col-7 { @apply w-3/5 p-3 }
+    .col-8 { @apply w-2/3 p-3 }
+    .col-9 { @apply w-3/4 p-3 }
+    .col-10 { @apply w-4/5 p-3 }
+    .col-11 { @apply w-5/6 p-3 }
+    .col-12 { @apply w-full p-3 } 
+
+    /* image gallery start */
+    .image-gallery { @apply grid-rows-[auto-fit_minmax(0,5px)]}
+    .item1{ @apply col-start-1 col-end-5 row-start-1 row-end-8 grid mb-4 md:mb-6 rounded-2xl}
+    .item2{ @apply col-start-5 col-end-8 row-start-1 row-end-9 grid mb-4 md:mb-6 rounded-2xl}
+    .item3{ @apply col-start-8 col-end-13 row-start-1 row-end-10 grid mb-4 md:mb-6 rounded-2xl}
+    .item4{ @apply col-start-1 col-end-5 row-start-8 row-end-[18] grid mb-4 md:mb-6 rounded-2xl}
+    .item5{ @apply col-start-5 col-end-9 row-start-10 row-end-[17] grid mb-4 md:mb-6 rounded-2xl}
+    .item6{ @apply col-start-9 col-end-13 row-start-10 row-end-[17] grid mb-4 md:mb-6 rounded-2xl}
+
+    .item1 img{ @apply sm:w-[358px] h-[177px] object-cover rounded-2xl}
+    .item2 img{ @apply sm:w-[264px] h-[285px] object-cover rounded-2xl}
+    .item3 img{ @apply sm:w-[456px] h-[285px] object-cover rounded-2xl}
+    .item4 img{ @apply sm:w-[358px] h-[283px] object-cover rounded-2xl}
+    .item5 img{ @apply sm:w-[360px] h-[175px] object-cover rounded-2xl}
+    .item6 img{ @apply sm:w-[360px] h-[175px] object-cover rounded-2xl}
+    .item:hover { @apply transform translate-y-[-10px]}
+    .item img{@apply rounded-2xl object-cover }
+    .accordionBtn p{@apply text-sm font-normal leading-6}
+
+    .drawer { @apply w-screen h-full fixed top-0 left-0  z-[60] opacity-0 invisible bg-black/60 transition !duration-700}
+    .drawer.active { @apply opacity-100 visible }
+    .drawer-content { @apply fixed top-0 right-0 translate-x-full z-[50] h-screen overflow-y-auto transition !duration-700 bg-white }
+    .drawer.active .drawer-content { @apply translate-x-0}
+
+    .modal {@apply w-full h-screen bg-black/60 fixed inset-0 z-[40] invisible opacity-0 transition-all duration-500 ease-in-out flex justify-center items-start}
+    .modal.active{@apply !opacity-100 !visible}
+    .modal.active > div {@apply !scale-100}
+   
+    .size-tabs .active { @apply bg-primary-light border-primary }
+    .size-tabs .active .custom-radio-field:checked + .custom-radio-span { @apply border-primary }
+    .day-tabs .active { @apply bg-primary-light border-primary }
+    .day-tabs .active .custom-radio-field:checked + .custom-radio-span { @apply border-primary }
+    .extra .custom-checkbox-field { @apply z-0 }
+    .extra.active { @apply !bg-primary-light !border-primary }
+    .extra.active .custom-checkbox-field:checked + .custom-checkbox-icon { @apply bg-primary border-primary }
+    .addon.active { @apply !bg-primary-light !border-primary }
+
+    .active-group .active { @apply !border-primary/50 !bg-primary/5 }
+    .active-group .active .fa-check { @apply !border-primary !bg-primary }
+    .active-group .active input:checked + .custom-radio-span { @apply !border-[3px] !border-primary }
+
+    input:checked + div { @apply border-primary }  
+    input:checked + div svg { @apply block }
+
+    
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+         -webkit-appearance: none;
+         margin: 0; 
+    }
+
+    input[type=number] {
+          -moz-appearance:textfield; 
+    }
+
+    #cookie.open { @apply visible -translate-y-0 transition-all duration-500 sm:bottom-6 }
+    
+    input[type="search"]::-webkit-search-decoration,
+    input[type="search"]::-webkit-search-cancel-button,
+    input[type="search"]::-webkit-search-results-button,
+    input[type="search"]::-webkit-search-results-decoration { display: none; }
+
+    .custom-radio { @apply relative w-4 h-4 cursor-pointer }
+    .custom-radio-field { @apply absolute z-10 opacity-0 w-full h-full appearance-none cursor-pointer }
+    .custom-radio-span { @apply absolute top-0 left-0 w-full h-full text-center rounded-full border cursor-pointer border-[#d9dee3] }
+    .custom-radio-field:checked + .custom-radio-span { @apply border-[5px] bg-white border-primary}
+    
+    .custom-radio.sm { @apply w-3 h-3 }
+    .custom-radio.sm .custom-radio-field:checked + .custom-radio-span { @apply border-[3px]}
+
+    .checkbox:checked { @apply border-none }
+    .checkbox:checked + .check-icon { @apply flex }
+    .checkbox:checked + .checkmark { @apply bg-primary border-primary }
+
+    .custom-checkbox { @apply relative w-4 h-4 cursor-pointer }
+    .custom-checkbox-field { @apply absolute z-10 opacity-0 w-full h-full appearance-none cursor-pointer }
+    .custom-checkbox-icon { @apply absolute top-0 left-0 w-full h-full text-center rounded leading-[14px] text-[10px] border cursor-pointer border-[#d9dee3] text-white }
+    .custom-checkbox-field:checked + .custom-checkbox-icon { @apply bg-primary border-primary }
+    .db-field-checkbox { @apply flex items-center pt-1 w-fit cursor-pointer }
+    .db-field-label { @apply text-[15px] ltr:pl-2 rtl:pr-2 leading-4 capitalize cursor-pointer }
+
+    .dropdown-group { @apply relative leading-[0px] }
+    .dropdown-btn { @apply cursor-pointer }
+    .dropdown-list { @apply scale-y-0 origin-top }
+    .dropdown-list.active { @apply scale-y-100 origin-top }
+
+        /* PAYMENT CARD */
+    .payment-fieldset { @apply grid grid-cols-2 md:grid-cols-4 justify-center gap-6 mb-12 }
+    .payment-label { @apply py-5 px-3 w-full flex flex-col items-center gap-3 rounded-lg shadow-sm text-center cursor-pointer relative border transition-all duration-300 bg-white border-white }
+    .payment-label.active { @apply border-primary bg-primary-light }
+    .payment-label input { @apply absolute top-2.5 left-2.5 accent-primary }
+    .payment-label img { @apply h-8 }
+    .payment-label span { @apply text-sm capitalize}
+
+     /* PRODUCT CARD GRID */
+     .product-card-grid { @apply relative flex flex-col rounded-2xl border transition border-[#EFF0F6] bg-white hover:shadow-xl }
+     .product-card-grid-image { @apply w-full rounded-t-2xl }
+     .product-card-grid-badge-group { @apply absolute top-3 left-3 rotate-[-35deg] }
+     .product-card-grid-badge-image { @apply w-12 h-12 }
+     .product-card-grid-badge-text { @apply capitalize text-sm font-semibold absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white }
+     .product-card-grid-content-group { @apply p-3 rounded-b-2xl h-full flex flex-col justify-between }
+     .product-card-grid-header-group { @apply flex items-start gap-2 mb-2 }
+     .product-card-grid-title { @apply text-sm font-semibold capitalize text-ellipsis whitespace-nowrap overflow-hidden w-fit max-w-[200px] }
+     .product-card-grid-describe { @apply text-xs text-ellipsis mb-3 text-[#6E7191]}
+     .product-card-grid-info-btn {@apply text-base text-[#6E7191]}
+     .product-card-grid-footer-group { @apply flex items-center justify-between gap-2 }
+     .product-card-grid-price-group { @apply flex flex-wrap items-center gap-x-2 }
+     .product-card-grid-price-previous { @apply text-sm font-medium text-black/60}
+     .product-card-grid-price-current { @apply text-lg font-medium }
+     .product-card-grid-cart-btn { @apply flex items-center gap-1.5 rounded-3xl capitalize text-sm font-medium h-6 px-2 shadow-btn transition bg-white hover:bg-primary}
+ 
+     /* PRODUCT CARD LIST */
+     .product-card-list { @apply relative flex items-center rounded-lg border transition border-[#EFF0F6] bg-white hover:shadow-xl }
+     .product-card-list-image { @apply flex-shrink-0 w-28 h-full object-cover rounded-l-lg }
+     .product-card-list-badge-group { @apply absolute top-3 left-3 rotate-[-35deg] }
+     .product-card-list-badge-image { @apply w-12 h-12 }
+     .product-card-list-badge-text { @apply capitalize text-sm font-semibold absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white }
+     .product-card-list-content-group { @apply p-3 rounded-r-lg w-full h-full flex flex-col justify-between }
+     .product-card-list-header-group { @apply flex items-start gap-2 mb-1 }
+     .product-card-list-title { @apply text-xs sm:text-sm font-medium capitalize }
+     .product-card-list-describe { @apply text-[10px] font-normal text-ellipsis mb-2 text-[#6E7191] }
+     .product-card-list-info-btn {@apply text-base text-[#6E7191]}
+     .product-card-list-footer-group { @apply flex items-center justify-between gap-2 }
+     .product-card-list-price-group { @apply flex flex-wrap items-center gap-x-2 }
+     .product-card-list-price-previous { @apply text-xs font-medium text-black/60 }
+     .product-card-list-price-current { @apply text-sm font-medium }
+     .product-card-list-cart-btn { @apply flex items-center gap-1.5 rounded-3xl capitalize text-sm font-medium h-6 px-2 shadow-btn transition bg-white hover:bg-primary} 
+
+     .thin-scrolling { @apply overflow-y-auto transition }
+     .thin-scrolling:hover::-webkit-scrollbar-thumb { @apply bg-primary }
+     .thin-scrolling::-webkit-scrollbar { @apply w-[3px] }
+     .thin-scrolling::-webkit-scrollbar { @apply rounded-2xl bg-transparent }
+
+     .veg-navs .veg-active { @apply shadow-btn bg-white } 
+     .veg-navs .veg-active i { @apply opacity-100 block ml-0} 
+     
+     .date{@apply w-[30px] h-[30px] rounded-[4px] text-sm bg-[#EFF0F6] flex items-center justify-center}
+
+
+      /* CHAT MESSAGE */
+    .chat-list { @apply flex flex-col-reverse overflow-x-hidden overflow-y-auto gap-5 p-4 transition }
+    .chat-list.frontend { @apply h-[calc(100vh_-_260px)] sm:h-[calc(100vh_-_250px)] }
+    .chat-list.backend { @apply h-[400px] sm:h-[calc(100vh_-_315px)] }
+    .chat-list.frontend.change { @apply h-[calc(100vh_-_320px)] sm:h-[calc(100vh_-_300px)] }
+    .chat-list.backend.change { @apply h-[400px] sm:h-[calc(100vh_-_380px)] }
+    .chat-item { @apply flex items-end gap-3 }
+    .chat-avatar { @apply w-7 h-7 mb-5 rounded-full flex-shrink-0 }
+    .chat-group { @apply flex flex-col gap-1 }
+    .chat-group-text { @apply flex flex-col gap-1 }
+    .chat-text { @apply w-fit max-w-sm text-sm py-3 px-4 }
+    .chat-group-meta { @apply flex flex-wrap items-center justify-between gap-1 }
+    .chat-meta { @apply text-xs }
+
+    .chat-user { @apply flex-row-reverse }
+    .chat-admin .chat-text { @apply rounded-2xl ltr:odd:rounded-bl ltr:even:rounded-tl rtl:odd:rounded-br rtl:even:rounded-tr bg-[#EFF0F6] }
+    .chat-user .chat-text { @apply rounded-2xl ltr:even:rounded-tr ltr:odd:rounded-br rtl:even:rounded-tl rtl:odd:rounded-bl bg-primary-light }
+    .chat-user .chat-group-text { @apply items-end }
+    .chat-user .chat-group-meta, .chat-meta { @apply flex-row-reverse text-black/40}
+
+    .chat-list::-webkit-scrollbar { @apply w-2 bg-transparent }
+    .chat-list::-webkit-scrollbar-thumb { @apply rounded-xl bg-gray-400 border-2 border-solid border-white }
+
+    .chat-footer { @apply w-full flex items-center gap-5 p-4 }
+    .chat-footer-file-label { @apply flex-shrink-0 relative isolate cursor-pointer w-fit h-fit }
+    .chat-footer-file-input { @apply absolute top-0 left-0 opacity-0 w-full h-full -z-10 }
+    .chat-footer-data { @apply w-full rounded-3xl py-2 px-4 overflow-hidden bg-[#F7F7FC] }
+    .chat-footer-data-list { @apply flex gap-3 py-2 overflow-x-auto }
+    .chat-footer-data-list::-webkit-scrollbar { @apply h-2 bg-gray-200 rounded-xl }
+    .chat-footer-data-list::-webkit-scrollbar-thumb { @apply rounded-xl bg-gray-400 border-2 border-solid border-slate-200 }
+    .chat-footer-data-input { @apply h-full w-full py-2 }
+    .chat-footer-sent { @apply flex-shrink-0 }
+ 
+
+    .jsCalendar tbody td:hover{@apply !bg-primary !text-white !rounded-full}
+    .jsCalendar tbody td:active{@apply !bg-primary !text-white !rounded-full}
+    .jsCalendar tbody td:focus{@apply !bg-primary !text-white !rounded-full}
+    .jsCalendar tbody td.jsCalendar-selected{@apply !bg-primary !text-white !rounded-full}
+    .jsCalendar tbody td.jsCalendar-selected:active{@apply !bg-primary !text-white !rounded-full}
+    .jsCalendar tbody td.jsCalendar-selected:active{@apply !bg-primary !text-white !rounded-full}
+    .jsCalendar td, .jsCalendar th{@apply !w-[41px] !h-[41px] !leading-[41px] !text-sm !font-normal}
+    .jsCalendar-current{@apply !rounded-full}
+    .jsCalendar-nav-right, .jsCalendar-nav-left{@apply !text-primary !mt-[18px] !mb-0 !font-extrabold}
+    .jsCalendar-title-name{@apply !p-4 !pl-2 text-lg !font-semibold}
+    .jsCalendar thead .jsCalendar-nav-left:after{ @apply !content-['\276E']}
+    .jsCalendar thead .jsCalendar-nav-right:after{ @apply !content-['\276F'] }
+    .jsCalendar tbody td.jsCalendar-current{@apply !bg-primary}
+    .jsCalendar table {@apply !m-auto !border-none !shadow-none}
+
+
+}
+
+

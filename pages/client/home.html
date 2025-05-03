@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../fonts/typography/rubik/Rubik.css">
+    <link rel="stylesheet" href="../../fonts/iconly/iconly.css">
+    <link rel="stylesheet" href="../../lib/swiper/bundle.min.css">
+
+    <!-- <script defer src="../../lib/jquery-v3.2.1.min.js"></script> -->
+    <script defer src="../../lib/swiper/bundle.min.js"></script>
+    <script defer src="../../lib/swiper/initialize.js"></script>
+    
+    <script defer src="../../js/script.js"></script>
+    <script defer src="../../js/dropdown.js"></script>
+
+    <title>Home :: Tiffin King</title>
+</head>
+<body >
+    <!--====================================
+                HEADER PART START  
+    =====================================-->
+    <header class="header fixed top-0 bg-transparent left-0 w-full z-10 transition-all duration-150 ease-in-out">
+        <nav class="container flex justify-between items-center py-4 md:py-5">
+            <a href="#"><img src="../../images/tiffinKing_logo.png" alt="logo"></a>
+            <ul class="hidden lg:flex gap-8 items-center text-sm font-medium">
+                <li class="hover:text-primary"><a href="./home.html">Home</a></li>
+                <li class="hover:text-primary"><a href="./menu-horizontal.html">Menu</a></li>
+                <li class="hover:text-primary"><a href="./about-us.html">About Us</a></li>
+                <li class="hover:text-primary"><a href="./contact-us.html">Contact Us</a></li>
+            </ul>
+            <div class="flex lg:gap-3 items-center">
+                <div class="relative dropdown-group language-group">
+                    <button class="dropdown-btn flex items-center gap-1 font-normal text-xs border px-2 h-8 rounded-full text-black bg-white capitalize"><img class="w-4 h-4 rounded-full" src="../../images/flag/united-states.png" alt="flag"><span> English</span></button>
+                    <ul class="dropdown-list min-w-32 w-full absolute top-9 right-0 p-2 bg-white shadow-md rounded-lg scale-y-0 transition-all duration-300">
+                        <li data-dir="ltr" class="flex items-center gap-2 py-1.5 ps-2 rounded-md cursor-pointer hover:bg-gray-100">
+                            <img src="../../images/flag/united-states.png" alt="flag" class="w-4 h-4 rounded-full">
+                            <span class="text-heading capitalize text-sm">english</span>
+                        </li>
+                        <li data-dir="rtl" class="flex items-center gap-2 py-1.5 ps-2 rounded-md cursor-pointer hover:bg-gray-100">
+                            <img src="../../images/flag/saudi-arabia.png" alt="flag" class="w-4 h-4 rounded-full">
+                            <span class="text-heading capitalize text-sm">arabic</span>
+                        </li>
+                    </ul>
+                </div>
+                <button data-drawer="#cart" class="hidden lg:flex items-center gap-1 font-medium text-sm bg-black/100 px-3 h-8 rounded-full text-white"><i class="icon-cart text-lg"></i>$0.00</button>
+                <div class="relative dropdown-group">
+                    <button class="hidden dropdown-btn lg:flex items-center gap-1 font-medium text-sm bg-primary px-3 h-8 rounded-full text-white"><i class="icon-profile-circle text-lg"></i>Log In</button>
+                    <div class="dropdown-list min-w-80 w-full absolute top-9 right-0 p-4 bg-white shadow-paper rounded-xl scale-y-0 transition-all duration-300">
+                        <div class="flex items-center gap-3 mb-5">
+                            <figure class="overflow-hidden relative z-10 w-[74px] h-[74px] border-2 border-dashed rounded-full inline-flex items-center justify-center border-white bg-gradient-to-t from-[#FFD361] to-[#FF006B] 
+                        before:absolute before:top-1/2 before:left-1/2 before:-translate-x-1/2 before:-translate-y-1/2 before:w-24 before:h-24 before:rounded-full before:-z-10 before:bg-white">
+                            <img class="w-[70px] h-[70px] rounded-full" src="../../images/avatar/customer.png" alt="avatar">
+                            <label for="avatar" class="block w-full h-11 absolute top-1/2 bottom-0 z-10 cursor-pointer bg-white/70">
+                                <input type="file" id="avatar" class="w-full h-full rounded-full opacity-0 cursor-pointer">
+                                <svg class="absolute left-1/2 -translate-x-1/2 bottom-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M20.97 1H18.03C16.76 1 16 1.76 16 3.03V5.97C16 7.24 16.76 8 18.03 8H20.97C22.24 8 23 7.24 23 5.97V3.03C23 1.76 22.24 1 20.97 1ZM21.19 4.31C21.07 4.43 20.91 4.49 20.75 4.49C20.59 4.49 20.43 4.43 20.31 4.31L20.13 4.13V6.37C20.13 6.72 19.85 7 19.5 7C19.15 7 18.87 6.72 18.87 6.37V4.13L18.69 4.31C18.45 4.55 18.05 4.55 17.81 4.31C17.57 4.07 17.57 3.67 17.81 3.43L19.06 2.18C19.11 2.13 19.18 2.09 19.25 2.06C19.27 2.05 19.29 2.05 19.31 2.04C19.36 2.02 19.41 2.01 19.47 2.01C19.49 2.01 19.51 2.01 19.53 2.01C19.6 2.01 19.66 2.02 19.73 2.05C19.74 2.05 19.74 2.05 19.75 2.05C19.82 2.08 19.88 2.12 19.93 2.17C19.94 2.18 19.94 2.18 19.95 2.18L21.2 3.43C21.44 3.67 21.44 4.07 21.19 4.31Z" fill="#1F1F39"/>
+                                    <path d="M9.00012 10.3801C10.3146 10.3801 11.3801 9.31456 11.3801 8.00012C11.3801 6.68568 10.3146 5.62012 9.00012 5.62012C7.68568 5.62012 6.62012 6.68568 6.62012 8.00012C6.62012 9.31456 7.68568 10.3801 9.00012 10.3801Z" fill="#1F1F39"/>
+                                    <path d="M20.97 8H20.5V12.61L20.37 12.5C19.59 11.83 18.33 11.83 17.55 12.5L13.39 16.07C12.61 16.74 11.35 16.74 10.57 16.07L10.23 15.79C9.52 15.17 8.39 15.11 7.59 15.65L3.85 18.16C3.63 17.6 3.5 16.95 3.5 16.19V7.81C3.5 4.99 4.99 3.5 7.81 3.5H16V3.03C16 2.63 16.07 2.29 16.23 2H7.81C4.17 2 2 4.17 2 7.81V16.19C2 17.28 2.19 18.23 2.56 19.03C3.42 20.93 5.26 22 7.81 22H16.19C19.83 22 22 19.83 22 16.19V7.77C21.71 7.93 21.37 8 20.97 8Z" fill="#1F1F39"/>
+                                </svg> 
+                            </label>
+                            </figure>
+                            <div>
+                                <h3 class="font-medium text-sm leading-6 capitalize mb-0.5">Madelyn Lubin</h3>
+                                <p class="text-xs mb-0.5 text-black/80">madelynlub@gmail.com</p>
+                                <p class="font-medium text-sm leading-6">$15.49</p>
+                            </div>
+                        </div>
+                        <div>
+                            <a href="./my-order.html" class="py-3 last:pb-0 flex items-center gap-3 border-b last:border-none border-[#EFF0F6] cursor-pointer group hover:text-primary transition">
+                                <i class="icon-reserve text-base text-black/80 group-hover:text-primary"></i>
+                                <div class="relative">
+                                    <span class="text-sm font-normal leading-6 pr-1">My Orders</span>
+                                    <div class="w-1 h-1 rounded-full bg-primary absolute right-0 top-1.5"></div>
+                                </div>
+                            </a>
+                            <a href="../auth/edit-profile.html" class="py-3 last:pb-0 flex items-center gap-3 border-b last:border-none border-[#EFF0F6] cursor-pointer group hover:text-primary transition">
+                                <i class="icon-edit text-base text-black/80 group-hover:text-primary"></i>
+                                <span class="text-sm font-normal leading-6">Edit Profile</span>
+                            </a>
+                            <a href="./chat.html" class="py-3 last:pb-0 flex items-center gap-3 border-b last:border-none border-[#EFF0F6] cursor-pointer group hover:text-primary transition">
+                                <i class="icon-line-messages text-base text-black/80 group-hover:text-primary"></i>
+                                <span class="text-sm font-normal leading-6">Chat</span>
+                            </a>
+                            <a href="../auth/change-password.html" class="py-3 last:pb-0 flex items-center gap-3 border-b last:border-none border-[#EFF0F6] cursor-pointer group hover:text-primary transition">
+                                <i class="icon-key text-base text-black/80 group-hover:text-primary"></i>
+                                <span class="text-sm font-normal leading-6">Change Password</span>
+                            </a>
+                            <a href="../auth/login.html" class="py-3 last:pb-0 flex items-center gap-3 border-b last:border-none border-[#EFF0F6] cursor-pointer group hover:text-primary transition">
+                                <i class="icon-logout text-base text-black/80 group-hover:text-primary"></i>
+                                <span class="text-sm font-normal leading-6">Logout</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!--====================================
+                HEADER PART START  
+    =====================================-->
+
+    <!--====================================
+                HERO PART START  
+    =====================================-->
+    <section class="bg-herobg pt-24 sm:pt-32">
+        <div class="container  mb-16 sm:mb-20">
+            <div class="row items-center justify-between gap-y-2">
+                <div class="col-12 md:col-6">
+                    <h1 class="text-2xl sm:text-[44px] font-semibold leading-tight mb-3 sm:mb-6 text-center md:text-start">Exceptional Catering for Everyday – <span class="text-primary">Fresh, Flavorful, & Memorable!</span></h1>
+                    <p class="text-base font-normal text-center md:text-start mb-4 sm:mb-8">Say goodbye to meal planning and cooking—our daily catering service ensures you enjoy fresh, delicious meals without the hassle.</p>
+                    <a href="./menu-horizontal.html" class=" w-fit bg-primary text-white text-lg font-medium ltr:pl-6 rtl:pr-6 py-1.5 sm:py-2 px-2 mx-auto md:mx-0 rounded-full flex items-center gap-6">Order Now <span class="w-8 sm:w-9 h-8 sm:h-9 rounded-full flex items-center justify-center bg-white"><i class="icon-arrow-upright text-xl text-primary"></i></span></a>
+                </div>
+                <div class="col-12 md:col-6">
+                    <div class="flex justify-center lg:justify-end">
+                        <div class="max-w-[479px]">
+                            <img class="w-full" src="../../images/banner/hero_banner.png" alt="hero banner">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--====================================
+                HERO PART END  
+    =====================================-->
+
+    <!--====================================
+           SIDEBAR CART PART START  
+    =====================================-->
+   <aside id="cart" class="drawer">
+        <div class="max-w-96 w-full drawer-content">
+            <div class="h-[calc(100vh-138px)] p-4 thin-scrolling">
+                <div class="sidebar-header flex items-center justify-between mb-3.5 w-full">
+                    <h2 class="text-[22px] font-medium flex-grow text-center">My Cart</h2>
+                    <i class="icon-fill-close-circle text-lg text-negative close-sidebar cursor-pointer"></i>
+                </div>
+                <ul>
+                    <li class="flex items-start gap-3 mb-3 pb-3 border-b last:mb-2 last:pb-0 last:border-b-0 border-gray-2">
+                        <img class="w-20 h-20 rounded-lg" src="../../images/product/01.png" alt="product">
+                        <div class="w-full">
+                           <p class="w-fit text-[10px] font-medium leading-5 px-2 rounded-full text-[#008BBA] bg-[#E0F8FF]">Breakfast</p>
+                           <a href="#" class="text-sm font-normal leading-6 underline">Creamy Cheese Burger</a>
+                           <p class="capitalize text-xs mb-1.5 text-black/80">Size: Medium Meal</p>
+                            <div class="flex items-center justify-between gap-2">
+                                <h3 class="text-xs font-semibold">$5.60</h3>
+                                <div class="flex items-center indec-group">
+                                    <button class="icon-trash text-[8px] w-4 h-4 leading-4 text-center rounded-full border transition text-primary border-primary indec-minus"></button>
+                                    <input type="number" value="1" class="appearance-none text-center w-7 text-xs font-semibold text-heading indec-value">
+                                    <button class="icon-add-circle text-base leading-4 text-center transition text-primary indec-plus"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-3 mb-3 pb-3 border-b last:mb-2 last:pb-0 last:border-b-0 border-gray-2">
+                        <img class="w-20 h-20 rounded-lg" src="../../images/product/01.png" alt="product">
+                        <div class="w-full">
+                           <p class="w-fit text-[10px] font-medium leading-5 px-2 rounded-full text-[#008BBA] bg-[#E0F8FF]">Breakfast</p>
+                           <a href="#" class="text-sm font-normal leading-6 underline">Creamy Cheese Burger</a>
+                           <p class="capitalize text-xs mb-1.5 text-black/80">Size: Medium Meal</p>
+                            <div class="flex items-center justify-between gap-2">
+                                <h3 class="text-xs font-semibold">$5.60</h3>
+                                <div class="flex items-center indec-group">
+                                    <button class="icon-minus-circle text-base leading4 text-center transition text-primary indec-minus"></button>
+                                    <input type="number" value="1" class="text-center w-7 text-xs font-semibold text-heading indec-value">
+                                    <button class="icon-add-circle text-base leading-4 text-center transition text-primary indec-plus"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="flex flex-col gap-1">
+                    <li class="flex gap-1">
+                        <h3 class="capitalize text-xs w-fit whitespace-nowrap">Side Dish:</h3>
+                        <p class="text-xs text-black/80">Pasta Aglio Olio (spicy), With Gnocchi, cocktail</p>
+                    </li>
+                    <li class="flex gap-1">
+                        <h3 class="capitalize text-xs w-fit whitespace-nowrap">Extras:</h3>
+                        <p class="text-xs text-black/80">Extra Cheese</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="p-4">
+                <div class="flex items-center justify-between gap-2 rounded-xl p-3 mb-3 border border-gray-1">
+                    <h3 class="capitalize text-sm font-medium">Subtotal</h3>
+                    <h4 class="text-sm font-medium text-[#1AB759]">$11.20</h4>
+                </div>
+                <a href="./checkout.html" class="flex justify-center rounded-3xl text-center capitalize text-base font-medium py-3 px-3 w-full text-white bg-primary">Procced to Checkout</a>
+            </div>
+            <!-- <div class="flex-col items-center hidden">
+                <div class="max-w-40 mb-12">
+                    <img class="w-full" src="../../images/empty-cart.gif" alt="empty">
+                </div>
+                <p class="text-sm font-normal text-black/80 text-center">Good food is always cooking! Go ahead, order some yummy items from the menu.</p>
+            </div> -->
+        </div>
+    </aside> 
+    <!--====================================
+           SIDEBAR CART PART START  
+    =====================================-->
+
+    <!--====================================
+           SIDEBAR PROFILE PART START  
+    =====================================-->
+    <aside id="profile" class="drawer">
+        <div class="max-w-md w-full p-4 drawer-content">
+            <div class="flex justify-end text-negative">
+                <i class="icon-line-close-circle text-xl close-sidebar cursor-pointer"></i>
+            </div>
+            <div class="flex items-center gap-3 mb-5">
+                <figure class="overflow-hidden relative z-10 w-[74px] h-[74px] border-2 border-dashed rounded-full inline-flex items-center justify-center border-white bg-gradient-to-t from-[#FFD361] to-[#FF006B] 
+            before:absolute before:top-1/2 before:left-1/2 before:-translate-x-1/2 before:-translate-y-1/2 before:w-24 before:h-24 before:rounded-full before:-z-10 before:bg-white">
+                <img class="w-[68px] h-[68px] rounded-full" src="../../images/avatar/customer.png" alt="avatar">
+                <label for="avatar" class="block w-full h-11 absolute top-1/2 bottom-0 z-10 cursor-pointer bg-white/70">
+                    <input type="file" id="avatar" class="w-full h-full rounded-full opacity-0 cursor-pointer">
+                    <svg class="absolute left-1/2 -translate-x-1/2 bottom-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M20.97 1H18.03C16.76 1 16 1.76 16 3.03V5.97C16 7.24 16.76 8 18.03 8H20.97C22.24 8 23 7.24 23 5.97V3.03C23 1.76 22.24 1 20.97 1ZM21.19 4.31C21.07 4.43 20.91 4.49 20.75 4.49C20.59 4.49 20.43 4.43 20.31 4.31L20.13 4.13V6.37C20.13 6.72 19.85 7 19.5 7C19.15 7 18.87 6.72 18.87 6.37V4.13L18.69 4.31C18.45 4.55 18.05 4.55 17.81 4.31C17.57 4.07 17.57 3.67 17.81 3.43L19.06 2.18C19.11 2.13 19.18 2.09 19.25 2.06C19.27 2.05 19.29 2.05 19.31 2.04C19.36 2.02 19.41 2.01 19.47 2.01C19.49 2.01 19.51 2.01 19.53 2.01C19.6 2.01 19.66 2.02 19.73 2.05C19.74 2.05 19.74 2.05 19.75 2.05C19.82 2.08 19.88 2.12 19.93 2.17C19.94 2.18 19.94 2.18 19.95 2.18L21.2 3.43C21.44 3.67 21.44 4.07 21.19 4.31Z" fill="#1F1F39"/>
+                        <path d="M9.00012 10.3801C10.3146 10.3801 11.3801 9.31456 11.3801 8.00012C11.3801 6.68568 10.3146 5.62012 9.00012 5.62012C7.68568 5.62012 6.62012 6.68568 6.62012 8.00012C6.62012 9.31456 7.68568 10.3801 9.00012 10.3801Z" fill="#1F1F39"/>
+                        <path d="M20.97 8H20.5V12.61L20.37 12.5C19.59 11.83 18.33 11.83 17.55 12.5L13.39 16.07C12.61 16.74 11.35 16.74 10.57 16.07L10.23 15.79C9.52 15.17 8.39 15.11 7.59 15.65L3.85 18.16C3.63 17.6 3.5 16.95 3.5 16.19V7.81C3.5 4.99 4.99 3.5 7.81 3.5H16V3.03C16 2.63 16.07 2.29 16.23 2H7.81C4.17 2 2 4.17 2 7.81V16.19C2 17.28 2.19 18.23 2.56 19.03C3.42 20.93 5.26 22 7.81 22H16.19C19.83 22 22 19.83 22 16.19V7.77C21.71 7.93 21.37 8 20.97 8Z" fill="#1F1F39"/>
+                    </svg> 
+                </label>
+                </figure>
+                <div>
+                    <h3 class="font-medium text-sm leading-6 capitalize mb-0.5">Madelyn Lubin</h3>
+                    <p class="text-xs mb-0.5 text-black/80">madelynlub@gmail.com</p>
+                    <p class="font-medium text-sm leading-6">$15.49</p>
+                </div>
+            </div>
+            <nav>
+                <a href="../auth/edit-profile.html" class="py-3 last:pb-0 flex items-center gap-3 border-b last:border-none border-[#EFF0F6] cursor-pointer group hover:text-primary transition">
+                    <i class="icon-edit text-base text-black/80 group-hover:text-primary"></i>
+                    <span class="text-sm font-normal leading-6">Edit Profile</span>
+                </a>
+                <a href="./chat.html" class="py-3 last:pb-0 flex items-center gap-3 border-b last:border-none border-[#EFF0F6] cursor-pointer group hover:text-primary transition">
+                    <i class="icon-line-messages text-base text-black/80 group-hover:text-primary"></i>
+                    <span class="text-sm font-normal leading-6">Chat</span>
+                </a>
+                <a href="../auth/change-password.html" class="py-3 last:pb-0 flex items-center gap-3 border-b last:border-none border-[#EFF0F6] cursor-pointer group hover:text-primary transition">
+                    <i class="icon-key text-base text-black/80 group-hover:text-primary"></i>
+                    <span class="text-sm font-normal leading-6">Change Password</span>
+                </a>
+                <a href="#" class="py-3 last:pb-0 flex items-center gap-3 border-b last:border-none border-[#EFF0F6] cursor-pointer group hover:text-primary transition">
+                    <i class="icon-global-edit text-base text-black/80 group-hover:text-primary"></i>
+                    <span class="text-sm font-normal leading-6">Change Language</span>
+                </a>
+                <a href="./term-condition.html" class="py-3 last:pb-0 flex items-center gap-3 border-b last:border-none border-[#EFF0F6] cursor-pointer group hover:text-primary transition">
+                    <i class="icon-key text-base text-black/80 group-hover:text-primary"></i>
+                    <span class="text-sm font-normal leading-6">Terms & Conditions</span>
+                </a>
+                <a href="./privacy-policy.html" class="py-3 last:pb-0 flex items-center gap-3 border-b last:border-none border-[#EFF0F6] cursor-pointer group hover:text-primary transition">
+                    <i class="icon-sheild text-base text-black/80 group-hover:text-primary"></i>
+                    <span class="text-sm font-normal leading-6">Privacy Policy</span>
+                </a>
+                <a href="./contact-us.html" class="py-3 last:pb-0 flex items-center gap-3 border-b last:border-none border-[#EFF0F6] cursor-pointer group hover:text-primary transition">
+                    <i class="icon-phone text-base text-black/80 group-hover:text-primary"></i>
+                    <span class="text-sm font-normal leading-6">Contuct Us</span>
+                </a>
+                <a href="./about-us.html" class="py-3 last:pb-0 flex items-center gap-3 border-b last:border-none border-[#EFF0F6] cursor-pointer group hover:text-primary transition">
+                    <i class="icon-line-info text-base text-black/80 group-hover:text-primary"></i>
+                    <span class="text-sm font-normal leading-6">About Us</span>
+                </a>
+                <a href="../auth/login.html" class="py-3 last:pb-0 flex items-center gap-3 border-b last:border-none border-[#EFF0F6] cursor-pointer group hover:text-primary transition">
+                    <i class="icon-logout text-base text-black/80 group-hover:text-primary"></i>
+                    <span class="text-sm font-normal leading-6">Logout</span>
+                </a>
+            </nav>
+        </div>
+    </aside>
+    <!--====================================
+           SIDEBAR PROFILE PART START  
+    =====================================-->
+
+    <!--====================================
+          WHAT WE SERVE PART START  
+    =====================================-->
+    <section class="container mb-16 sm:mb-20">
+        <h2 class="text-center font-semibold text-[22px] sm:text-[32px] mb-2 sm:mb-4">What We<span class="text-primary"> Serve </span>You</h2>
+        <p class="text-sm sm:text-base font-normal text-center mb-2.5 sm:mb-6">From Our Kitchen to Your Table – Pure Culinary Excellence</p>
+        <div dir="ltr" class="swiper category-swiper">
+            <div class="swiper-wrapper">
+                <a href="./menu-horizontal.html" class="swiper-slide w-full !flex flex-col items-center text-center gap-y-3 sm:gap-y-6 p-3 sm:p-6 pb-2 sm:pb-4 rounded-2xl transition group hover:bg-primary-light bg-[#F7F7FC]">
+                    <img class="h-9 md:h-[100px] drop-shadow-category" src="../../images/category/breakfast.png" alt="category">
+                    <h3 class="text-sm sm:text-[22px] font-semibold group-hover:text-primary leading-6">Breakfast</h3>
+                </a>
+                <a href="./menu-horizontal.html" class="swiper-slide !flex flex-col items-center text-center gap-y-3 sm:gap-y-6 p-3 sm:p-6 pb-2 sm:pb-4 rounded-2xl transition group hover:bg-primary-light bg-[#F7F7FC]">
+                    <img class="h-9 md:h-[100px] drop-shadow-category" src="../../images/category/brunch.png" alt="category">
+                    <h3 class="text-sm sm:text-[22px] font-semibold group-hover:text-primary leading-6">Brunch</h3>
+                </a>
+                <a href="./menu-horizontal.html" class="swiper-slide !flex flex-col items-center text-center gap-y-3 sm:gap-y-6 p-3 sm:p-6 pb-2 sm:pb-4 rounded-2xl transition group hover:bg-primary-light bg-[#F7F7FC]">
+                    <img class="h-9 md:h-[100px] drop-shadow-category" src="../../images/category/lunch.png" alt="category">
+                    <h3 class="text-sm sm:text-[22px] font-semibold group-hover:text-primary leading-6">Lunch</h3>
+                </a>
+                <a href="./menu-horizontal.html" class="swiper-slide !flex flex-col items-center text-center gap-y-3 sm:gap-6 p-3 sm:p-6 pb-2 sm:pb-4 rounded-2xl transition group hover:bg-primary-light bg-[#F7F7FC]">
+                    <img class="h-9 md:h-[100px] drop-shadow-category" src="../../images/category/snacks.png" alt="category">
+                    <h3 class="text-sm sm:text-[22px] font-semibold group-hover:text-primary leading-6">Snacks</h3>
+                </a>
+                <a href="./menu-horizontal.html" class="swiper-slide !flex flex-col items-center text-center gap-y-3 sm:gap-6 p-3 sm:p-6 pb-2 sm:pb-4 rounded-2xl transition group hover:bg-primary-light bg-[#F7F7FC]">
+                    <img class="h-9 md:h-[100px] drop-shadow-category" src="../../images/category/dinner.png" alt="category">
+                    <h3 class="text-sm sm:text-[22px] font-semibold group-hover:text-primary leading-6">Dinner</h3>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!--====================================
+          WHAT WE SERVE PART END  
+    =====================================-->
+
+    <!--====================================
+          ABOUT US PART START  
+    =====================================-->
+    <section class="container">
+        <div class="mt-12 md:mt-14 mb-12 sm:mb-20">
+            <div class="row items-center justify-between sm:flex-row flex-col-reverse">
+                <div class="col-12 md:col-6">
+                    <div class="flex justify-center lg:justify-start">
+                        <div class="max-w-[479px]">
+                            <img class="w-full" src="../../images/about.png" alt="about banner">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 md:col-6">
+                    <h6 class="text-primary text-base sm:text-[22px] font-semibold sm:font-medium md:rtl:text-right md:ltr:text-left text-center mb-1 sm:mb-2">About Us</h6>
+                    <h1 class="text-2xl sm:text-[44px] font-semibold leading-8 sm:leading-tight mb-3 sm:mb-6 text-center md:text-start ">Passionately Catering, Perfecting Every Bite</h1>
+                    <p class="text-base font-normal text-center md:text-start mb-4 sm:mb-8">At TiffinKing, we bring people together with exceptional food and service. Using fresh ingredients and expert craftsmanship, we create memorable dining experiences for any occasion. Whether it’s daily corporate meals or grand celebrations, we cater with passion and precision.</p>
+                    <button class="bg-primary text-white text-lg font-medium ltr:pl-6 rtl:pr-6 py-1.5 sm:py-2 px-2 mx-auto md:mx-0 rounded-full flex items-center gap-6">Read More <span class="w-8 sm:w-9 h-8 sm:h-9 rounded-full flex items-center justify-center bg-white"><i class="icon-arrow-upright text-xl text-primary"></i></span></button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--====================================
+         ABOUT US PART END 
+    =====================================-->
+
+    <!--====================================
+            FEATURES PART START  
+    =====================================-->
+    <section class="bg-herobg mb-2 sm:mb-20 py-12 sm:py-20">
+        <div class="container">
+            <h2 class="text-center font-semibold text-[22px] sm:text-[32px] mb-2 sm:mb-4">What We<span class="text-primary"> Serve </span>You</h2>
+            <p class="text-sm sm:text-base font-normal text-center mb-2.5 sm:mb-6">From Our Kitchen to Your Table – Pure Culinary Excellence</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="flex flex-col justify-center items-center text-center">
+                    <img class="mb-6" src="../../images/features/Landscape.png" alt="features">
+                    <h3 class="text-lg font-semibold mb-2">Various Region Based</h3>
+                    <p>We have various regional-style food categories</p>
+                </div>
+                <div class="flex flex-col justify-center items-center text-center">
+                    <img class="mb-6" src="../../images/features/Office Staff.png" alt="features">
+                    <h3 class="text-lg font-semibold mb-2">Various Region Based</h3>
+                    <p>We have various regional-style food categories</p>
+                </div>
+                <div class="flex flex-col justify-center items-center text-center">
+                    <img class="mb-6" src="../../images/features/Coconut Oil.png" alt="features">
+                    <h3 class="text-lg font-semibold mb-2">Various Region Based</h3>
+                    <p>We have various regional-style food categories</p>
+                </div>
+                <div class="flex flex-col justify-center items-center text-center">
+                    <img class="mb-6" src="../../images/features/Thumbs Up.png" alt="features">
+                    <h3 class="text-lg font-semibold mb-2">Various Region Based</h3>
+                    <p>We have various regional-style food categories</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--====================================
+             FEATURES PART END  
+    =====================================-->
+
+    <!--====================================
+            IMAGE GALLERY PART START  
+    =====================================-->
+    <section class="container mb-10 sm:mb-20">
+        <h2 class="text-[22px] sm:text-[32px] font-semibold text-center mb-8 sm:mb-12">Image Gallery</h2>
+        <div class="image-gallery block xs:grid gap-x-4 md:gap-x-6">
+            <div class="item item1 transition-all duration-300">
+                <img class="w-full h-full" src="../../images/gallery/Beef with Brocolli.png" alt="gallery">
+            </div>
+            <div class="item item2 transition-all duration-300">
+                <img class="w-full h-full" src="../../images/gallery/Beef with Mix Vegetables.png" alt="gallery">
+            </div>
+            <div class="item item3 transition-all duration-300">
+                <img class="w-full h-full" src="../../images/gallery/Kung Pao Squid.png" alt="gallery">
+            </div>
+            <div class="item item4 transition-all duration-300">
+                <img class="w-full h-full" src="../../images/gallery/Poached Pear Salad.png" alt="gallery">
+            </div>
+            <div class="item item5 transition-all duration-300">
+                <img class="w-full h-full" src="../../images/gallery/Roasted Salmon Salad.png" alt="gallery">
+            </div>
+            <div class="item item6 transition-all duration-300">
+                <img class="w-full h-full" src="../../images/gallery/Szechuan Beef.png" alt="gallery">
+            </div>
+        </div> 
+    </section>
+    <!--====================================
+            IMAGE GALLERY PART END 
+    =====================================-->
+
+    <!--====================================
+               FAQ PART START  
+    =====================================-->
+    <section class="container mb-16 sm:mb-20">
+        <h2 class="text-[22px] sm:text-[32px] font-semibold mb-8 sm:mb-12 text-center">Frequently Asked Questions (FAQ)</h2>
+        <div class="flex flex-col gap-4">
+            <div class="accordionBtn border border-[#EFF0F6] py-3 sm:py-6 rounded-2xl">
+                <div class="px-3 sm:px-6 h-full flex justify-between items-center w-full">
+                    <h6 class="text-base sm:text-[22px] font-medium leading-normal">What types of meals do you offer?</h6>
+                    <i class="accordion-icon icon-arrow-down text-primary text-base sm:text-2xl transition-all duration-300"></i>
+                </div>
+                <div style="height: 0px;" class="overflow-hidden px-3 sm:px-6 transition-all duration-300">
+                    <p>At TiffinKing, we offer a diverse range of meals, including home-style comfort food, corporate catering options, and region-based specialties. Our menu features nutritious and delicious dishes crafted with fresh ingredients, ensuring a perfect balance of taste and health. Whether you need daily meals, event catering, or customized meal plans, we’ve got you covered!</p>
+                </div>
+            </div>
+            <div class="accordionBtn border border-[#EFF0F6] rounded-2xl py-3 sm:py-6">
+                <div class="px-3 sm:px-6 flex justify-between items-center w-full">
+                    <h6 class="text-base sm:text-[22px] font-medium leading-normal">Are your ingredients fresh and locally sourced?</h6>
+                    <i class="accordion-icon icon-arrow-down text-primary text-base sm:text-2xl transition-all duration-300"></i>
+                </div>
+                <div style="height: 0px;" class="overflow-hidden px-3 sm:px-6 transition-all duration-300">
+                    <p>At TiffinKing, we offer a diverse range of meals, including home-style comfort food, corporate catering options, and region-based specialties. Our menu features nutritious and delicious dishes crafted with fresh ingredients, ensuring a perfect balance of taste and health. Whether you need daily meals, event catering, or customized meal plans, we’ve got you covered!</p>
+                </div>
+            </div>
+            <div class="accordionBtn border border-[#EFF0F6] rounded-2xl py-3 sm:py-6">
+                <div class="px-3 sm:px-6 flex justify-between items-center w-full">
+                    <h6 class="text-base sm:text-[22px] font-medium leading-normal">Do you provide vegetarian or vegan options?</h6>
+                    <i class="accordion-icon icon-arrow-down text-primary text-base sm:text-2xl transition-all duration-300"></i>
+                </div>
+                <div style="height: 0px;" class="overflow-hidden px-3 sm:px-6 transition-all duration-300">
+                    <p>At TiffinKing, we offer a diverse range of meals, including home-style comfort food, corporate catering options, and region-based specialties. Our menu features nutritious and delicious dishes crafted with fresh ingredients, ensuring a perfect balance of taste and health. Whether you need daily meals, event catering, or customized meal plans, we’ve got you covered!</p>
+                </div>
+            </div>
+            <div class="accordionBtn border border-[#EFF0F6] rounded-2xl py-3 sm:py-6">
+                <div class="px-3 sm:px-6 flex justify-between items-center w-full">
+                    <h6 class="text-base sm:text-[22px] font-medium leading-normal">Can I customize my meal plan?</h6>
+                    <i class="accordion-icon icon-arrow-down text-primary text-base sm:text-2xl transition-all duration-300"></i>
+                </div>
+                <div style="height: 0px;" class="overflow-hidden px-3 sm:px-6 transition-all duration-300">
+                    <p>At TiffinKing, we offer a diverse range of meals, including home-style comfort food, corporate catering options, and region-based specialties. Our menu features nutritious and delicious dishes crafted with fresh ingredients, ensuring a perfect balance of taste and health. Whether you need daily meals, event catering, or customized meal plans, we’ve got you covered!</p>
+                </div>
+            </div>
+            <div class="accordionBtn border border-[#EFF0F6] rounded-2xl py-3 sm:py-6">
+                <div class="px-3 sm:px-6 flex justify-between items-center w-full">
+                    <h6 class="text-base sm:text-[22px] font-medium leading-normal">What is the delivery schedule and service area?</h6>
+                    <i class="accordion-icon icon-arrow-down text-primary text-base sm:text-2xl transition-all duration-300"></i>
+                </div>
+                <div style="height: 0px;" class="overflow-hidden px-3 sm:px-6 transition-all duration-300">
+                    <p>At TiffinKing, we offer a diverse range of meals, including home-style comfort food, corporate catering options, and region-based specialties. Our menu features nutritious and delicious dishes crafted with fresh ingredients, ensuring a perfect balance of taste and health. Whether you need daily meals, event catering, or customized meal plans, we’ve got you covered!</p>
+                </div>
+            </div>
+            <div class="accordionBtn border border-[#EFF0F6] rounded-2xl py-3 sm:py-6">
+                <div class="px-3 sm:px-6 flex justify-between items-center w-full">
+                    <h6 class="text-base sm:text-[22px] font-medium leading-normal">How do I place an order?</h6>
+                    <i class="accordion-icon icon-arrow-down text-primary text-base sm:text-2xl transition-all duration-300"></i>
+                </div>
+                <div style="height: 0px;" class="overflow-hidden px-3 sm:px-6 transition-all duration-300">
+                    <p>At TiffinKing, we offer a diverse range of meals, including home-style comfort food, corporate catering options, and region-based specialties. Our menu features nutritious and delicious dishes crafted with fresh ingredients, ensuring a perfect balance of taste and health. Whether you need daily meals, event catering, or customized meal plans, we’ve got you covered!</p>
+                </div>
+            </div>
+            <div class="accordionBtn border border-[#EFF0F6] rounded-2xl py-3 sm:py-6">
+                <div class="px-3 sm:px-6 flex justify-between items-center w-full">
+                    <h6 class="text-base sm:text-[22px] font-medium leading-normal">Are your ingredients fresh and locally sourced?</h6>
+                    <i class="accordion-icon icon-arrow-down text-primary text-base sm:text-2xl transition-all duration-300"></i>
+                </div>
+                <div style="height: 0px;" class="overflow-hidden px-3 sm:px-6 transition-all duration-300">
+                    <p>At TiffinKing, we offer a diverse range of meals, including home-style comfort food, corporate catering options, and region-based specialties. Our menu features nutritious and delicious dishes crafted with fresh ingredients, ensuring a perfect balance of taste and health. Whether you need daily meals, event catering, or customized meal plans, we’ve got you covered!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--====================================
+               FAQ PART END  
+    =====================================-->
+
+    <!--====================================
+           COOKIE MODAL PART START  
+    =====================================-->
+    <div id="cookie" class="translate-y-full w-full max-w-full sm:max-w-xs p-4 fixed bottom-0 ltr:left-0 rtl:right-0 sm:ltr:left-6 m:rtl:right-6 z-[80] rounded-t-xl sm:rounded-xl visible shadow-cookieShadow bg-white transition-all duration-500">
+        <h1 class="text-base font-medium text-black mb-3">About Our Privacy</h1>
+        <p class="text-[13px] font-normal mb-6">This website uses cookies to better 
+            understand how visitors use our site, for 
+            advertising, and to offer you a more 
+            personalized experience. We share 
+            information about your use of our site 
+            with analytics, social media, and 
+            advertising partners in according with 
+            our Privacy Statement. You can manage 
+            this sharing by selecting the 
+            "Cookie Settings" link.</p>
+        <div class="flex items-center gap-4 mb-4">
+            <button class="py-2 px-6 rounded-full bg-[#1AB759] text-white text-base font-medium"><i class="icon-fill-cookie-bite"></i> Accept</button>
+            <button class="close-cookie py-2 px-6 rounded-full border text-base font-medium text-white bg-black/40">Cancel</button>
+        </div>
+        <a href="./cookie-settings.html" class="text-sm font-normal text-primary underline">Cookie Settings</a>
+    </div>
+     <!--====================================
+           COOKIE MODAL PART START  
+    =====================================-->
+
+    <!--====================================
+           MOBILE NAV PART START  
+    =====================================-->
+    <section class="w-full lg:hidden bottom-0 left-0 z-20 fixed drop-shadow-mobile-nav">
+        <div class="bg-white grid grid-cols-5 justify-items-center h-[56px]">
+            <a href="" class="flex flex-col items-center justify-center text-[#6E7191]">
+                <i class="icon-home text-base"></i>
+               <h6 class="text-xs font-normal">Home</h6>
+            </a>
+            <a href="" class="flex flex-col items-center justify-center text-[#6E7191]">
+                <i class="icon-document text-base"></i>
+                <h6 class="text-xs font-normal">Menu</h6>
+            </a>
+            <button data-drawer="#cart" class="w-12 h-12 rounded-full bg-primary -mt-5 flex items-center justify-center relative shadow-mobile-cartBtn">
+                <i class="icon-cart text-2xl text-white"></i>
+                <div class="absolute top-2 right-1.5 w-2 h-2 rounded-full bg-[#FFDB1F]"></div>
+            </button>
+            <a href="" class="flex flex-col items-center justify-center text-[#6E7191]">
+                <i class="icon-order text-base"></i>
+                <h6 class="text-xs font-normal">My Orders</h6>
+            </a>
+            <button data-drawer="#profile" class="flex flex-col items-center justify-center text-[#6E7191]">
+                <i class="icon-profile-circle text-base"></i>
+                <h6 class="text-xs font-normal">Profile</h6>
+            </button>
+        </div>
+    </section>
+    <!--====================================
+            MOBILE NAV  PART END  
+    =====================================-->
+
+    <!--====================================
+           FOOTER PART START  
+    =====================================-->
+    <section class="pt-8 sm:pt-12 bg-primary/100 lg:mb-0 mb-14">
+        <div class="container flex md:flex-row flex-col items-start justify-between gap-6">
+            <div>
+               <a href="#"><img class="mb-6 w-32 h-auto" src="../../images/tiffinking_logo_white.png" alt="logo"></a>
+               <div class="mb-6">
+                    <p class="text-xs font-normal mb-3 text-white">Subscribe to our newsletter to get latest updates</p>
+                    <form action="" class="h-12 p-2 rounded-lg bg-white flex">
+                        <input type="text" class=" ps-2 outline-none" placeholder="Your email address">
+                        <button class="p-2 rounded-md bg-primary h-8 flex items-center justify-center text-white">Subscribe</button>
+                    </form>
+               </div>
+               <div class="mb-0 md:mb-8">
+                    <p class="text-xs font-normal mb-4 text-white">Follow Us on</p>
+                    <div class="flex items-center gap-6">
+                        <img src="../../images/social/facebook.png" alt="social">
+                        <img src="../../images/social/Instagram.png" alt="social">
+                        <img src="../../images/social/Twitter.png" alt="social">
+                        <img src="../../images/social/Youtube.png" alt="social">
+                    </div>
+               </div>
+            </div>
+            <div class="text-white">
+                <h2 class="text-lg font-semibold mb-4">Legal</h2>
+                <ul class="[&_li]:text-base [&_li]:font-normal flex flex-col gap-3">
+                    <li><a href="#">Cookie Setting</a></li>
+                    <li><a href="#">Terms & conditions</a></li>
+                    <li><a href="#">Privacy policy</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contuct Us</a></li>
+                </ul>
+            </div>
+            <div class="text-white">
+                <h2 class="text-lg font-semibold mb-2">Download Our Apps</h2>
+                <div class="flex gap-3 items-center mb-6">
+                    <img src="../../images/footer/appStore.png" alt="appstore">
+                    <img src="../../images/footer/playStore.png" alt="playstore">
+                </div>
+                <div class="flex gap-2 mb-3">
+                    <i class="icon-email-track text-2xl"></i>
+                    <span class="text-lg font-normal">tiffinkinghotline@gmail.com</span>
+                </div>
+                <div class="flex gap-2">
+                    <i class="icon-call-center text-2xl"></i>
+                    <span class="text-lg font-normal">0123659874563</span>
+                </div>
+            </div>
+        </div>
+        <div class="p-4 lg:p-6 border-t border-primary-light/40">
+            <p class="text-sm font-normal leading-6 text-center text-white">&copy; TiffinKing by iNiLabs 2022, All Rights Reserved</p>
+        </div>
+    </section>
+    <!--====================================
+           FOOTER PART END  
+    =====================================-->
+</body>
+</html>
