@@ -2271,10 +2271,6 @@ input[type="search"]::-webkit-search-decoration,
   margin-left: -2rem;
 }
 
-.-mt-0\.5 {
-  margin-top: -0.125rem;
-}
-
 .-mt-5 {
   margin-top: -1.25rem;
 }
@@ -2492,10 +2488,6 @@ input[type="search"]::-webkit-search-decoration,
 
 .h-1 {
   height: 0.25rem;
-}
-
-.h-10 {
-  height: 2.5rem;
 }
 
 .h-11 {
@@ -3955,11 +3947,6 @@ input[type="search"]::-webkit-search-decoration,
 .bg-\[\#1AB759\] {
   --tw-bg-opacity: 1;
   background-color: rgb(26 183 89 / var(--tw-bg-opacity, 1));
-}
-
-.bg-\[\#79B34C\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(121 179 76 / var(--tw-bg-opacity, 1));
 }
 
 .bg-\[\#BDEFFF\] {
